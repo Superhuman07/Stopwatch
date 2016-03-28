@@ -71,7 +71,7 @@ private int seconds= 0;
         running = false;
         seconds = 0;
     }
-    // handler updates the textview after a schedule time limit of 1 second
+    // handler updates the Textview after a schedule time limit of 1 second
     private void runTimer()
     {   final Handler handler = new Handler();
         final TextView timeView = (TextView)findViewById(R.id.time_view);
