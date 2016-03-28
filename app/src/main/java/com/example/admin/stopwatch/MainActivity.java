@@ -16,7 +16,7 @@ private int seconds= 0;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        // gets variables from bundle after the activity is recreated
         if (savedInstanceState != null) {
             seconds = savedInstanceState.getInt("seconds");
             running = savedInstanceState.getBoolean("running");
@@ -26,7 +26,7 @@ private int seconds= 0;
         runTimer();
 
     }
-
+    //save varibles
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState)
     {
@@ -71,7 +71,7 @@ private int seconds= 0;
         running = false;
         seconds = 0;
     }
-
+    // handler updates the textview after a schedule time limit of 1 second
     private void runTimer()
     {   final Handler handler = new Handler();
         final TextView timeView = (TextView)findViewById(R.id.time_view);
