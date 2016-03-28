@@ -24,6 +24,7 @@ private int seconds= 0;
 
         }
         runTimer();
+
     }
 
     @Override
@@ -36,7 +37,7 @@ private int seconds= 0;
 
 
 
-
+    // onPause helps the app to remember variables when the app isnt in the foreground
     @Override
     protected void onPause()
     {
@@ -44,6 +45,8 @@ private int seconds= 0;
         wasRunning = running;
         running = false;
     }
+
+    // onResume helps the app to remember variables when the app comes back in the foreground
     @Override
     protected void onResume()
     {
